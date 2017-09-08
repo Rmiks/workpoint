@@ -1,0 +1,39 @@
+<template>
+    <common_field type="text" name="metaDescription" description="Lapas apraksts (META description)" >
+        <affected_templates>
+            <include name="*" />
+            <exclude name="file" />
+            <exclude name="siteServices/robots" />
+            <exclude name="siteServices/sitemap" />
+            <exclude name="siteServices/authentication" />
+        </affected_templates>
+    </common_field>
+    <rules>
+        <object name="language_root">
+            <child_allow name="siteServices/authentication" max="1" />
+            <child_allow name="group" />
+            <child_allow name="text" />
+            <child_allow name="products/section" />
+            <child_allow name="galleries/section" />
+            <child_allow name="news/section" />
+            <child_allow name="contacts" max="1" />
+            <child_allow name="authorizationGroup" max="1" />
+        </object>
+        <object name="text">
+            <child_allow name="text" />
+            <parent_allow name="group" />
+        </object>
+        <object name="file">
+            <parent_allow name="text" />
+        </object>
+        <object name="products/section">
+            <child_allow name="products/item" />
+        </object>
+        <object name="authorizationGroup">
+            <child_allow name="auth/login" max="1"/>
+            <child_allow name="auth/email_login" max="1"/>
+            <child_allow name="auth/email_register" max="1"/>
+            <child_allow name="auth/email_verification" max="1"/>
+        </object>
+    </rules>
+</template>

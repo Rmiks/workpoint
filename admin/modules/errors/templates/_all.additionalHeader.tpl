@@ -1,0 +1,1 @@
+{simpleForm confirmationContext=$_module->aliasContext buttonAliasContext=$_module->aliasContext do=deleteAll type="delete_all"}{/simpleForm}

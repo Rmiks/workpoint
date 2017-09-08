@@ -1,0 +1,13 @@
+<?php
+
+class %moduleClass% extends bundleBaseModule
+{
+    protected $mainObjectClass = %objectClass%::class;
+
+    public $features = [
+        'create' => true,
+        'view'   => false,
+        'edit'   => true,
+        'delete' => true,
+    ];
+}

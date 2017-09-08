@@ -1,0 +1,117 @@
+.primaryPanel .footer .page-navigation-box-wrap{
+    margin-bottom: 25px;
+}
+
+.primaryPanel .footer .page-navigation-box-wrap,
+.primaryPanel .footer .page-navigation-box
+{
+    display: inline-block;
+    float: right;
+}
+
+.primaryPanel .footer .page-navigation-box
+{
+    background-color: #fff;
+}
+.panelLayout .footer .page-navigation-box .button
+{
+    text-decoration: none;
+    padding: 13px;
+    outline: none;
+}
+.page-navigation-box a
+{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.page-navigation-box .page-navigation
+{
+    display: inline-block;
+    border: none;
+}
+
+.page-navigation-box .page
+{
+    display: inline-block;
+    vertical-align: bottom;
+    height:38px;
+    cursor: pointer;
+    line-height: 38px;
+    text-align: center;
+}
+
+.page-navigation-box .page a
+{
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.page-navigation-box .page.skipped{
+    cursor: default;
+}
+.page-navigation-box .page.skipped:hover{
+    color: #1d1d1d;
+    background-color: #fff;
+}
+
+.page-navigation-box .page.page-previous a,
+.page-navigation-box .page.page-next a{
+    height: 100%;
+}
+
+.page-navigation-box .page.page-previous img,
+.page-navigation-box .page.page-next img{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.page-navigation-box .page.page-previous,
+.page-navigation-box .page.page-next
+{
+    width: 38px;
+    border-right: 1px solid #d7d7d7;
+}
+
+.page-navigation-box .page.active,
+.page-navigation-box .page:hover{
+    color: #37b1a7;
+    background-color: #f3f1f1;
+}
+
+.page-navigation .page{
+    font-size: 14px;
+    font-weight: bold;
+    color: #1d1d1d;
+}
+
+.page-navigation-box .page.page-input{
+    padding: 0;
+    height: 38px;
+    border-right: 1px solid #d7d7d7;
+    height: 38px;
+}
+
+.page-navigation-box .page.page-input input {
+    height: 38px;
+    padding: 0 ;
+    padding-left: 13px;
+    margin:0;
+    border: none;
+    width: 90px;
+    text-overflow: ellipsis;
+    text-align: center;
+    outline: none;
+}
+
+.page-navigation-box .page.page-input input:focus::-webkit-input-placeholder { color:transparent; }
+.page-navigation-box .page.page-input input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+.page-navigation-box .page.page-input input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+.page-navigation-box .page.page-input input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.page-navigation-box .label
+{
+    vertical-align: -7%;
+}

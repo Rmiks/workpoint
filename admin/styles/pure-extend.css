@@ -1,0 +1,292 @@
+
+.pure-form input[type=text], .pure-form input[type=password], .pure-form input[type=email], .pure-form input[type=url], .pure-form input[type=date], .pure-form input[type=month], .pure-form input[type=time], .pure-form input[type=datetime], .pure-form input[type=datetime-local], .pure-form input[type=week], .pure-form input[type=number], .pure-form input[type=search], .pure-form input[type=tel], .pure-form input[type=color], .pure-form select, .pure-form textarea{
+    border-radius:0;
+    border-color: #d4d4d4;
+    box-shadow: none;
+    background-color: #f8f8f8;
+    font-size: 13px;
+    font-weight: bold;
+    height: 35px;
+    padding-left: 16px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+.pure-form textarea{
+    height: auto;
+    white-space: normal;
+    padding: 7px 14px ;
+    overflow:auto;
+	vertical-align:top;
+}
+
+.pure-form input[type=text]:hover,
+.pure-form select:hover{
+
+    border-color: #b2b1b1;
+    cursor: pointer;
+}
+
+.pure-form select:focus,
+.pure-form input[type=text]:focus{
+    background-color: #fff;
+    border-color: #6c6c6c;
+}
+
+.pure-form select:hover{
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,0,0,0.06) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(0,0,0,0.06)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,0,0,0.06) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,0,0,0.06) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,0,0,0.06) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(0,0,0,0.06) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
+}
+
+/* INPUT STATUS*/
+
+.pure-form input.error{
+    border-color: #f00a0a !important;
+}
+
+/* LABEL*/
+.pure-form label{
+    margin: 10px 0;
+}
+
+/*UNDER INPUT INFO*/
+.pure-input-info{
+    font-size: 11px;
+    font-style: italic;
+    line-height:1;
+    padding: 0;
+    margin: 0;
+    margin-top:8px;
+}
+
+.pure-input-info.error{
+    color: #f00a0a;
+}
+
+
+.pure-form-stacked input[type=text], .pure-form-stacked input[type=password], .pure-form-stacked input[type=email], .pure-form-stacked input[type=url], .pure-form-stacked input[type=date], .pure-form-stacked input[type=month], .pure-form-stacked input[type=time], .pure-form-stacked input[type=datetime], .pure-form-stacked input[type=datetime-local], .pure-form-stacked input[type=week], .pure-form-stacked input[type=number], .pure-form-stacked input[type=search], .pure-form-stacked input[type=tel], .pure-form-stacked input[type=color], .pure-form-stacked input[type=file], .pure-form-stacked select, .pure-form-stacked label, .pure-form-stacked textarea, .pure-form-stacked button{
+    margin: 4px 0;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+
+/* CHECKBOX*/
+/** Custom checkboxes with svg underneath **/
+.pure-cbox {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-right: 10px;
+}
+
+.pure-cbox span{
+    fill: #c6c6c6;
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+    border-radius: 2px;
+    background: #c6c6c6;
+    display: inline-block;
+    vertical-align: top;
+    margin-right:5px;
+}
+
+.pure-cbox span svg{
+    height: 100%;
+    width: 100%;
+}
+
+.pure-cbox input[type='checkbox'] {
+    display: none;
+}
+
+.pure-cbox input[type='checkbox']:checked ~ span svg{
+    fill: #fff;
+}
+.pure-cbox input[type='checkbox']:checked ~ span{
+    background: #37b1a7;
+}
+
+.pure-cbox input[type='checkbox']:disabled ~ span{
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.pure-cbox input[type='checkbox']:disabled ~ span *{
+    cursor: not-allowed;
+}
+
+.pure-cbox input[type='checkbox']:disabled:checked ~ span svg{
+    fill: #fff;
+}
+
+.pure-cbox input[type='checkbox']:disabled:checked ~ span{
+    background: #37b1a7;
+}
+
+/* INPUT WITH BUTTON*/
+/*block > input + button */
+.pure-input-btn{
+    font-size: 0;
+    padding: 4px 0;
+}
+
+.pure-input-btn input[type=text],
+.pure-input-btn button
+{
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pure-input-btn input[type=text]{
+    width: 80%;
+}
+
+.pure-input-btn input[type=text] + button{
+    width: 20%;
+    padding:0;
+}
+
+/*FILE INPUT
+!!! label + input MUST !!!*/
+.pure-file {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.pure-file + label {
+    cursor: pointer;
+    border-radius:0;
+    border:1px solid #d4d4d4;
+    box-shadow: none;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 16px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+.pure-file + label:hover {
+    border-color: #b2b1b1;
+    cursor: pointer;
+}
+
+.pure-file:focus + label{
+    background-color: #fff;
+    border-color: #6c6c6c;
+}
+.pure-file label span{
+    color: #1d1d1d;
+    font-weight: bold;
+}
+
+.pure-file-preview{
+    margin-top:-5px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #d4d4d4;
+    border-top: none;
+    box-sizing: border-box;
+}
+.pure-file-preview .pure-file-preview_img-wrap{
+    height: inherit;
+    overflow: hidden;
+    width: 35px;
+    text-align: center;
+    border-right: 1px solid #d4d4d4;
+}
+.pure-file-preview .pure-file-preview_link{
+    height: inherit;
+}
+.pure-file-preview .pure-file-preview_img{
+    height: inherit;
+    width: auto;
+    max-width: 35px;
+}
+.pure-file-preview .pure-file-preview_info{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pure-file-preview .pure-file-preview_img-wrap + .pure-file-preview_info{
+    padding-left: 45px;
+}
+
+/* BUTTONS START*/
+
+.pure-btn{
+    padding: 0 20px;
+    display: block;
+    cursor: pointer;
+    vertical-align: middle;
+    height: 35px;
+    line-height: 35px;
+    background-color: #37b1a7;
+    border: none;
+    border-radius: initial;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+.pure-btn svg{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -3px 10px 0 0;
+    fill: #fff;
+}
+
+/*BUTTON WITH ICON ONLY*/
+
+.pure-btn-icon{
+    display: inline-block;
+    box-sizing: border-box;
+    padding:10px;
+}
+
+.pure-btn-icon svg{
+    margin: 0;
+}
+
+
+/* FLOAT RIGHT*/
+.pull-right{
+    float:right;
+}
+
+.pull-left{
+    float:left;
+}
+
+
+/* CLEARFIX - use to clear floats*/
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}

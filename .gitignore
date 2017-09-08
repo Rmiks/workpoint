@@ -1,0 +1,11 @@
+.DS_Store
+._*
+shared/3rdpart/tcpdf/fonts/*cached
+Thumbs.db
+files/
+shared/cache/
+node_modules
+.sass-cache
+*.swp
+.idea/
+shared/vendor

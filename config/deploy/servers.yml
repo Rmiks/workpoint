@@ -1,0 +1,14 @@
+staging:
+  stage: staging
+  host: staging.cube.lv
+  user: leaf_bundle
+  deploy_path: ~/app
+  forward_agent: true
+
+production:
+  stage: production
+  host:
+  user:
+  port: 22
+  deploy_path: ~/app
+  forward_agent: true

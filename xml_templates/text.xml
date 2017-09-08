@@ -1,0 +1,25 @@
+<template name="Teksts" table="yes">
+
+	<field type="richtext" name="text" searchable="yes" />
+
+	<field type="array" name="randomArray">
+		<field type="text" name="name" />
+		<field type="text" name="text" />
+	</field>
+
+	<field type="richtext" name="text2" />
+
+	<group name="group" description="Grupa">
+		<field type="text" name="group1Text"  description="Grupas teksts" />
+		<field type="text" name="group1Text2" />
+	</group>
+
+	<group name="grupa2">
+		<field type="text" name="group2Text" />
+		<field type="text" name="group2Text2" />
+		<field type="array" name="randomArray2" description="Grupas 2 array">
+			<field type="text" name="text" />
+		</field>
+	</group>
+
+</template>

@@ -1,0 +1,6 @@
+<template name="Kontakti">
+
+    <field name="shortText" type="richtext" description="Short contacts text" />
+    <field name="beforeFormText" type="richtext" description="Text before form" />
+    <field name="textAfterSubmit" type="text" description="Text after form submit" />
+</template>

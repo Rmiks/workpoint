@@ -1,0 +1,10 @@
+<template name="Valoda">
+
+	<field type="fileobject" name="metaImage" description="Lapas bilde (META image)" />
+    <field type="text" name="siteTitle" description="Lapas virsraksts" />
+    <field type="objectlink" name="target" description="Sākuma lapa" />
+
+    <field type="fileobject" name="logo" description="Lapas logo" />
+    <field type="text" name="logoText" description="Lapas logo ALT teksts" />
+    
+</template>

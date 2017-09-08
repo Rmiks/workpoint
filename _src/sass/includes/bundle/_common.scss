@@ -1,0 +1,78 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    z-index: $z-body;
+    color: $color-body-text;
+    background: $color-body-bg;
+    @include font-regular();
+
+    @include media ($tablet) {
+        z-index: $z-body-tablet;
+    }
+
+    @include media ($desktop) {
+        z-index: $z-body-desktop;
+    }
+}
+
+section {
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 0;
+    font-size: rem(16);
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: 0;
+}
+
+strong, b {
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button, input, textarea, select {
+    outline: 0;
+    border: rem(1) solid black;
+    padding: 0;
+    background: transparent;
+}
+
+.skipLinks a {
+    position: absolute;
+    top: rem(-90000);
+    left: 0;
+
+    &:focus, &:active {
+        left: 0;
+        top: rem(100);
+        padding: rem(10);
+    }
+}
+
+.container {
+    @include container;
+}

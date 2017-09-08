@@ -1,0 +1,45 @@
+<?php
+
+class %objectClass% extends bundleBaseObject
+{
+    const tableName = '%tableName%';
+
+     protected
+        $name,
+        $slug,
+        $active,
+        $author_ip,
+        $add_date;
+
+    protected $fieldsDefinition = [
+        'name'   => [
+            'not_empty' => true
+        ],
+        'slug'   => [
+            'not_empty' => true
+        ],
+        'active' => [
+            'input_type'    => 'checkbox',
+            'optional'      => true,
+            'empty_to_null' => true
+        ],
+    ];
+
+    protected static $_tableDefsStr = [
+        self::tableName => [
+            'fields'  =>
+                'id                 int auto_increment
+                name                varchar(255)
+                slug                varchar(255)
+                active              tinyint
+                add_date            datetime
+                author_ip           varchar(15)
+                '
+            ,
+            'indexes' => '
+            primary id
+            ',
+            'engine'  => 'InnoDB'
+        ]
+    ];
+}

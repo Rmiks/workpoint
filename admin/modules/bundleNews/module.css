@@ -1,0 +1,42 @@
+form.edit .multipleItemsBlock{
+    margin-left: 36%;
+}
+
+.images__item {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px 10px 0;
+}
+
+.images__item-url {
+	display: table;
+	width: 100px;
+	height: 100px;
+	background: #ddd;
+}
+
+.images__item-content {
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.images__item:hover .images__item-delete {
+	opacity: 1;
+}
+
+.images__item-delete {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 5px 8px;
+	margin: 0 !important;
+	height: auto;
+	opacity: 0;
+	transition: all .2s;
+}
+
+.images__item-deleteIcon {
+	margin: 0;
+}

@@ -1,0 +1,3 @@
+<template name="Category" table="yes">
+        <field type="select" name="category" description="Category name from admin bundleProductCategory module" />       
+</template>

@@ -1,0 +1,23 @@
+/* MISC */
+@import "includes/bundle/theme";
+@import "includes/bundle/typography";
+@import "includes/bundle/layout";
+@import "includes/bundle/mixins";
+
+
+/* VENDOR */
+// @import "includes/vendor/mySuperAwesomePlugin"
+// ...
+
+
+/* BLOCK STYLINGS */
+// Uncomment whichever is necessary
+// Default is fixed height
+@import "includes/blocks/footer/footer_fixed";
+// @import "includes/blocks/footer/footer_dynamic";
+// ...
+
+
+/* TEMPLATE STYLINGS */
+@import "includes/templates/language_root";
+// ...

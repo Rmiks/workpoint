@@ -1,0 +1,83 @@
+.leafTable {
+	display: table;
+	width: 100%;
+	color: #1d1d1d;
+	font-size: 13px;
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+
+.leafTable .thead,
+.leafTable thead {
+	display: table-header-group;
+	font-weight: 700;
+	color: #fff;
+    background: #282828;
+    text-transform: capitalize;
+    border-right:1px solid #282828;
+}
+
+.leafTable .thead span,
+.leafTable thead th {
+    padding: 5px 10px;
+    text-align: center;
+    vertical-align: middle;
+    min-height: 30px;
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.leafTable .tbody,
+.leafTable tbody{
+    border: 1px solid #d4d4d4;
+}
+
+.leafTable .tbody {
+	display: table-row-group;
+}
+
+.leafTable .thead div,
+.leafTable .tbody a,
+.leafTable .tbody div {
+	display: table-row;
+}
+
+.leafTable .tbody a,
+.leafTable .tbody div,
+.leafTable tbody tr {
+	transition: all .2s;
+}
+
+.leafTable .tbody a:hover,
+.leafTable .tbody div:hover,
+.leafTable tbody tr:hover {
+	background: #d0eeec !important;
+}
+
+.leafTable .tbody a:nth-child(odd),
+.leafTable .tbody div:nth-child(odd),
+.leafTable tbody tr:nth-child(odd) {
+	background: #f3f1f1;
+}
+
+
+.leafTable span, .leafTable td, .leafTable th {
+	display: table-cell;
+	padding: 7px 6px;
+    height: 30px;
+    height: 30px;
+    box-sizing: border-box
+}
+
+.leafTable tbody tr td,
+.leafTable .tbody span{
+    border-right: 1px solid #d4d4d4;
+}
+
+.leafTable.noBorder{
+    border-spacing: 0;
+    border-collapse: collapse;
+    border:1px solid transparent;
+}

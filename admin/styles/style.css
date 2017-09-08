@@ -1,0 +1,479 @@
+@import "input.css";
+@import "button.css";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1d1d1d;
+}
+
+a img {
+    border: none;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+iframe {
+    border: 1px solid #CCCCCC;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+form {
+    padding: 0;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearInside:after {
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+/* MAIN MENU */
+.mainMenu {
+    height: 65px;
+    background: #000;
+    border-bottom: 5px solid #37b1a7;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.mainMenu__primary,
+.mainMenu__userMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.mainMenu__primary {
+    float: left;
+}
+
+.mainMenu__userMenu {
+    background: inherit;
+    position: absolute;
+    right: 0;
+    top:0;
+    height: 100%;
+}
+
+.mainMenu__item {
+    float: left;
+    height: 100%;
+}
+
+.mainMenu__item--small {
+    width: 60px;
+}
+
+.mainMenu__item--logout {
+    background: #242424;
+}
+
+.mainMenu__item a {
+    display: block;
+    position: relative;
+    height: 100%;
+    color: #d3d3d3;
+    font-size: 0px;
+    text-transform: uppercase;
+    line-height: 60px;
+    border-right: 1px solid #242424;
+    padding: 0 25px 0 47px;
+    transition: all .2s;
+}
+
+@media (min-width: 1300px) {
+    .mainMenu__item a {
+        font-size: 13px;
+        padding: 0 25px 0 55px;
+    }
+}
+
+.mainMenu__item:hover a,
+.mainMenu__item--active a {
+    background: #37b1a7;
+    color: #fff;
+    border-color: transparent;
+}
+
+.mainMenu__item--logout:hover a {
+    background: #242424;
+}
+
+.mainMenu__item--small a {
+    padding: 0;
+    border-right: 0;
+    border-left: 1px solid #242424;
+}
+
+.mainMenu__item img {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    margin-top: -2px;
+    max-width: 24px;
+    opacity: .5;
+    transform: translate3d(0, -50%, 0);
+    transition: all .2s;
+}
+
+.mainMenu__item--logout img {
+    opacity: 1;
+}
+
+.mainMenu__item:hover img,
+.mainMenu__item--active img {
+    opacity: 1;
+}
+
+.mainMenu__item--small img {
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+/* objects */
+.objectName {
+    width: 90%;
+}
+
+/* headers */
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 140%;
+}
+
+h3 {
+    font-size: 130%;
+}
+
+h4 {
+    font-size: 120%;
+}
+
+h5 {
+    font-size: 110%;
+}
+
+h6 {
+    font-size: 100%;
+}
+
+.dataTable {
+    width: 100%;
+}
+
+.dataTable td,
+.dataTable th {
+    padding: 3px;
+}
+
+.dataTable td {
+    text-align: left;
+}
+
+.dataTable td a {
+    display: block;
+}
+
+.dataTable tr.invisible a {
+    color: #8a9088;
+}
+
+.dataTable th {
+    background-color: #d9eed3;
+    color: #8a9088;
+    font-weight: normal;
+    text-align: center;
+}
+
+.dataTable tr:hover {
+    background-color: #d9eed3;
+}
+
+/* toolbar */
+.toolbar-wrap, .toolbar {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.toolbar-wrap {
+    margin: 10px 0;
+    background-color: #efeded;
+    border-color: white #c7c5c5 #c7c5c5 #c7c5c5;
+}
+
+.toolbar {
+    padding: 5px 15px;
+    border-color: #c7c5c5 #f9f8f8 white #f9f8f8;
+}
+
+.special-field-wrap,
+.specialFieldWrap {
+    display: inline-block;
+}
+
+.special-field-wrap input,
+.specialFieldWrap input {
+    padding-right: 22px;
+    width: 231px;
+}
+
+.special-field-wrap button,
+.specialFieldWrap button {
+    background: transparent none;
+    border: 0;
+    padding: 0;
+    max-height: 16px;
+    vertical-align: text-top;
+    margin-left: -22px;
+}
+
+/* multiple items block styling */
+.edit .multipleItemsBlock .template {
+    display: none;
+}
+
+.edit .addItemBlock {
+    color: #192c6a;
+}
+
+.edit .addItemButton,
+.edit .removeItemButton {
+    cursor: pointer;
+}
+
+.edit .removeItemButton[disabled] {
+    cursor: default;
+}
+
+.edit .removeItemButton[disabled] .icon {
+    opacity: .5;
+}
+
+.edit .addItemButton .text,
+.edit .removeItemButton .text {
+    text-transform: lowercase;
+}
+
+.edit .addItemButton:hover .text,
+.edit .removeItemButton:hover .text {
+    text-decoration: underline;
+}
+
+.edit .addItemButton[disabled]:hover .text,
+.edit .removeItemButton[disabled]:hover .text {
+    text-decoration: none;
+}
+
+.edit .addItemBlock .icon {
+    margin-right: 5px;
+}
+
+/* some panel layout modifications */
+.panel-layout .left-panel .active a {
+    text-shadow: rgba(0, 0, 0, 0.4) 0 1px;
+}
+
+.panel-layout .left-panel li li:hover a {
+    text-shadow: rgba(0, 0, 0, .6) 0 1px 7px;
+}
+
+body .left-panel .active a,
+body .left-panel .active:hover a {
+    margin-bottom: -1px;
+}
+
+body .left-panel .active a {
+    padding-top: 0px;
+    border-top: 1px solid #8595a5;
+}
+
+body .left-panel .active a,
+body .left-panel .active:hover a {
+    border-bottom: 1px solid #e3e3e5;
+}
+
+/* Panel footer block btn start*/
+
+.footer {
+    background: #d9d9d9;
+    border: 1px solid #c5c5c5;
+    box-sizing: border-box;
+    height: inherit;
+    overflow: hidden;
+}
+
+.footer .btn-panel {
+    float: left;
+}
+
+.footer .btn-panel .btn-panel_btn {
+    float: left;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 38px;
+    min-height: 38px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #5a5a5a;
+    border: none;
+    border-radius: 0px;
+    outline: 0;
+    background-color: transparent;
+    border-right: 1px solid #c5c5c5;
+    box-shadow: none;
+}
+
+.footer .btn-panel .btn-panel_btn.active,
+.footer .btn-panel .btn-panel_btn:hover {
+    background-color: #37b1a7;
+    color: #fff;
+}
+
+.footer .btn-panel .btn-panel_btn.btn-panel_btn--right {
+    float: right;
+}
+
+.footer .deleteForm {
+    display: inline-block;
+}
+
+/*Panel footer btn block end*/
+
+/* leafDialog */
+
+.leafDialog.ui-widget {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.leafDialog:not(.leafMediaDialog):not(.leafEmbedDialog) .ui-widget-header .ui-icon, .leafDialog:not(.leafMediaDialog):not(.leafEmbedDialog) .ui-state-hover .ui-icon {
+    background-image: none;
+}
+
+.leafDialog .ui-widget-header {
+    color: #fff !important;
+}
+
+.leafDialog .ui-widget-content {
+    color: #d3d3d3 !important;
+}
+
+.leafDialog .content-tree-wrap li .node {
+    background-color: transparent;
+    border-bottom: 1px solid #282828;
+    padding: 7px 0 7px 10px;
+    transition: all .2s;
+}
+
+.leafDialog .content-tree-wrap li .node:hover {
+    color: #fff;
+    background-color: #37b1a7;
+}
+
+.leafDialog .content-tree-wrap li .node:hover .expand-tool__icon {
+    fill: #000;
+}
+
+.leafDialog .content-tree-wrap .node .name {
+    display: inline-block;
+    width: 80%;
+    line-height: 1.1;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.leafDialog .content-tree-wrap ul img {
+    opacity: 0.6;
+    vertical-align: -12%;
+}
+
+.leafDialog .content-tree-wrap li .node:hover img {
+    opacity: 1;
+}
+
+.leafDialog.ui-dialog:not(.leafMediaDialog):not(.leafEmbedDialog) .ui-dialog-titlebar-close {
+    right: 12px;
+    top: 22px;
+    padding: 0;
+}
+
+.leafDialog:not(.leafMediaDialog):not(.leafEmbedDialog) .ui-widget-header .ui-state-hover {
+    border: none;
+    background: none;
+}
+
+.leafDialog:not(.leafMediaDialog):not(.leafEmbedDialog) .ui-icon {
+    text-indent: 0;
+}
+
+.leafDialog__close {
+    width: 15px;
+    height: 15px;
+    fill: #7a7a7a;
+}
+
+.leafDialog__close:hover {
+    fill: #fff;
+}
+
+.expand-tool__icon {
+    width: 10px;
+    height: 10px;
+    fill: #4a4a4a;
+    position: relative;
+    top: 8px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.expand-tool.open .expand-tool__icon {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.leafDialog .content-tree-wrap .expand-tool, .leafDialog .content-tree-wrap .expand-tool.open {
+    background: none;
+    background-image: none;
+}
+
+.leafDialog .content-tree-wrap .expand-tool:hover {
+    background: none;
+}
+
+.arrayField > label {
+    font-size: 14px;
+    padding-bottom: 6px;
+    font-weight: bold;
+}

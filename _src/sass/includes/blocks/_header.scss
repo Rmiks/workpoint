@@ -1,0 +1,102 @@
+.pageHeader {
+
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: inline-block;
+
+    .is-open & {
+    }
+
+    @include media($tablet) {
+    }
+
+    @include media($desktop) {
+        display: none;
+    }
+
+    &__button {
+        width: rem(23);
+        height: rem(40);
+        outline: 0;
+        border: 0;
+        position: relative;
+    }
+
+    &__text {
+        font-size: rem(14);
+
+        &--open {
+            .is-open & {
+                display: none;
+            }
+        }
+
+        &--close {
+            display: none;
+            .is-open & {
+                display: block;
+            }
+        }
+
+    }
+
+    &__line {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: rem(23);
+        height: rem(4);
+        background: currentColor;
+        right: 0;
+
+        .is-open & {
+            background: rgba($color-white, 0);
+        }
+
+        .is-opening & {
+            transition: background 0s .1s;
+        }
+
+        .is-closing & {
+            transition: background 0s .1s;
+        }
+
+        &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: rem(23);
+            height: rem(4);
+            right: 0;
+            background: currentColor;
+
+            .is-open & {
+                top: 0;
+            }
+
+            .is-opening & {
+                transition: top .1s, transform .1s .1s;
+            }
+
+            .is-closing & {
+                transition: transform .1s, top .1s .1s;
+            }
+        }
+
+        &::before {
+            top: rem(-9);
+            .is-open & {
+                transform: rotate(45deg)
+            }
+        }
+
+        &::after {
+            top: rem(9);
+            .is-open & {
+                transform: rotate(-45deg)
+            }
+        }
+    }
+}

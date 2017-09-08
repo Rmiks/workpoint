@@ -1,0 +1,39 @@
+.templateField, #objectEditForm li{
+
+}
+
+.objectNameContainer
+{
+    position: relative;
+}
+.objectNameContainer .firstSaveBtnContainer
+{
+    position: absolute;
+    right: 0;
+    top: 27px;
+    text-align: right;
+    width: 150px;
+}
+
+.objectUrlPartContainer,
+.objectUrlPartContainer a,
+.panelLayout .primaryPanel .objectUrlPartContainer a
+{
+    font-size: 12px;
+	color: #888;
+}
+.objectUrlPart
+{
+	color: #37b1a7;
+
+}
+
+.templateField .objectUrl
+{
+    font-size: 90%;
+}
+.templateField .objectUrl img
+{
+    position: relative;
+    top: 3px;
+}

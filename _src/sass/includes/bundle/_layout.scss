@@ -1,0 +1,50 @@
+@import "../vendor/bourbon/bourbon";
+
+
+/* LAYOUT CONFIGURATION */
+
+// Max width used for grid
+$max-width: rem(1160) !global; 
+
+// Max width used for container - basically it`s $max-width + $cont-padding * 2
+$cont-max-width: rem(1200) !global;
+$cont-padding: rem(20) !global;
+
+// You can set paddings for each breakpoint as well here...
+// $cont-padding-tablet: rem(30) !global;
+// $cont-padding-desktop: rem(40) !global;
+
+
+/* GRID CONFIG */
+// Default columns count
+$grid-columns: 6 !global;
+
+// Here you can define column & gutter size
+// 3 & 1 is proportions. It means column size is 3x greater than gutter
+$column: modular-scale(3, 1em, $golden) !default;
+$gutter: modular-scale(1, 1em, $golden) !default;
+
+
+/* VISUAL GRID */
+$visual-grid: false !global;
+$visual-grid-index: front;
+$visual-grid-color: red !default;
+$visual-grid-opacity: 0.2 !default;
+
+
+@import "../vendor/neat/neat-helpers";
+
+
+/* BREAKPOINTS */
+$tablet-bp: rem(768);
+$desktop-bp: rem(1024);
+
+$tablet: new-breakpoint(min-width $tablet-bp 8) !global;     // Use 8 column grid
+$desktop: new-breakpoint(min-width $desktop-bp 12) !global;  // Use 12 column grid
+
+$z-body: 1;
+$z-body-tablet: 2;
+$z-body-desktop: 3;
+
+
+@import "../vendor/neat/neat";

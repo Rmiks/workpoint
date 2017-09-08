@@ -1,0 +1,102 @@
+/* TRANSITIONS */
+$transition-animation: cubic-bezier(0.45, 0, 0.55, 1);
+$transition-timing   : .3s;
+
+// How to use?
+// @include transition;                                -> sets transition to `all` with default timing
+// @include transition(background)                     -> sets transition to `background` with default timing
+// @include transition(background color)               -> sets transition to `background` & `color` with default timings
+// @include transition((background, color))            -> sets transition to `background` & `color` with default timings
+// @include transition((background: .15s, color: .2s)) -> sets transition to `background` & `color` with given timings
+@mixin transition( $attributes: () ) {
+    @if length( $attributes ) >= 1 {
+
+        $value: '';
+
+        @each $attr, $time in $attributes {
+
+            @if $time {
+                $value: #{$value} #{$attr} #{$time};
+            } @else {
+                $value: #{$value} #{$attr} #{$transition-timing}
+            }
+
+            @if index( $attributes, $attr ) != length( $attributes ) {
+                $value: '#{$value}, ';
+            }
+        }
+
+        transition: #{$value} $transition-animation;
+    } @else {
+        transition: all .3s $transition-animation;
+    }
+}
+
+@mixin transition-linear() {
+    transition: all .2s;
+}
+
+
+/* POSITIONING */
+@mixin absolute-center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin absolute-center-vertical() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin absolute-center-horizontal() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin absolute-fullsize() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* OTHERS */
+@mixin hide() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+
+/* LAYOUT */
+@mixin container( $local-max-width: $cont-max-width, $padding: true ) {
+    position: relative;
+    @include outer-container($local-max-width);
+
+    @if ( $padding == true ) {
+        @if ( global-variable-exists( cont-padding ) ) {
+            padding: 0 $cont-padding;
+        }
+
+        @if ( global-variable-exists( cont-padding-tablet ) ) {
+            @include media ($tablet) {
+                padding: 0 $cont-padding-tablet;
+            }
+        }
+
+        @if ( global-variable-exists( cont-padding-desktop ) ) {
+            @include media ($desktop) {
+                padding: 0 $cont-padding-desktop;
+            }
+        }
+    }
+}

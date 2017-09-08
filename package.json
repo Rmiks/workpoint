@@ -1,0 +1,44 @@
+{
+  "name": "leaf-bundle",
+  "version": "1.0.0",
+  "main": "js/main.js",
+  "description": "Leaf PHP framework ==============================",
+  "repository": "git@git.cubesystems.lv:cube/leaf-bundle.git",
+  "scripts": {
+    "webpack:watch": "webpack --watch --devtool source-map",
+    "gulp:watch": "gulp watch",
+    "watch": "npm-run-all -p -r webpack:watch gulp:watch",
+    "build": "webpack --config=webpack.build.config.js && gulp build"
+  },
+  "devDependencies": {
+    "@types/google.analytics": "^0.0.32",
+    "@types/node": "^7.0.8",
+    "autoprefixer": "^6.7.2",
+    "awesome-typescript-loader": "^3.0.3",
+    "browser-sync": "^2.18.7",
+    "clean-webpack-plugin": "^0.1.15",
+    "css-loader": "^0.26.2",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-cssfont64": "^0.0.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-typescript": "^3.1.6",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11",
+    "imagemin-pngquant": "^5.0.0",
+    "npm-run-all": "^4.0.1",
+    "style-loader": "^0.13.2",
+    "typescript": "^2.4.2",
+    "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

@@ -1,0 +1,42 @@
+.i18nInput .i18nWrap
+{
+
+}
+.i18nInput textarea
+{
+	margin-bottom: 0px;
+    width: 100%;
+}
+.i18nInput .languageWrap
+{
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    padding-right: inherit;
+
+}
+.i18nInput .value{
+    position: relative;
+}
+.i18nInput .languageWrap .languageWrap_select
+{
+    max-width: 70px;
+    padding: 0px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    height: 25px;
+    line-height: 25px;
+    background-color: #f8f8f8;
+    border: 1px solid #d4d4d4;
+    color: #1d1d1d;
+    font-size: 12px;
+    margin:0px !important;
+    box-sizing: border-box;
+}
+.i18nInput .languageWrap .languageWrap_select option{
+    background: #fff;
+}
+
+.i18nInput .languageWrap .languageWrap_select:hover{
+    background: #d4d4d4 !important;
+}

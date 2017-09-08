@@ -1,0 +1,25 @@
+.panelLayout .secondaryPanel .warningLevel,
+.panelLayout .primaryPanel .warningLevel
+{
+	color: red;
+	font-weight: bold;
+}
+.filterForm
+{
+	width: 100%;
+}
+.thead input[type=text],
+.thead select
+{
+	width: auto;
+}
+
+.secondaryPanel{
+    display: none;
+}
+.leafTable {
+    font-size: 100% !important;
+}
+.leafTable pre{
+    font-size: 1.3em !important;
+}

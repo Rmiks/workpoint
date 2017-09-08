@@ -1,0 +1,8 @@
+<template name="Grupa">
+    <field type="objectlink" name="target">
+        <property name="description" value="Atvērt kā noklusēto"/>
+    </field>
+    <aliases>
+        <template code="authorizationGroup" name="Lietotāja autorizācijas grupa"/>
+    </aliases>
+</template>

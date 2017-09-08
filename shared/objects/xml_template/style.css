@@ -1,0 +1,133 @@
+@import "../style.css";
+.mceResizeBox {
+	width: 10px;
+	height: 10px;
+	border: 1px dotted gray;
+	margin: 0px;
+	padding: 0px;
+}
+.drag{
+	cursor:pointer;
+}
+
+.statusBarResize{
+	height:20px;
+	width:20px;
+	display:block;
+	cursor:pointer;
+	float:right;
+	cursor: se-resize;
+	background:url("modules/content/img/statusbar_resize.gif") no-repeat bottom right;
+}
+
+.hiddenField
+{
+    border-bottom: none;
+    padding: 0;
+}
+
+#objectEditForm li .templateField{
+}
+.templateField .icon
+{
+	vertical-align: -15%;
+}
+#objectEditForm .sideLabel label{
+	display:inline;
+}
+
+.arrayItem{
+	background-color:#f3f3f3;
+	padding: 5px;
+    margin-bottom: 10px;
+}
+.arrayItem:first-child {
+    margin-top: 10px;
+}
+.arrayItem .delHref{
+	float:right;
+	position:relative;
+}
+.arrayItem .linkField, .arrayItem .textField, .arrayItem .selectField, .arrayItem .checkboxField, .arrayItem .objectlinkField{
+	display:inline;
+	display:inline-block;
+}
+.arrayItem .linkField label, .arrayItem .textField label, .arrayItem .selectField label, .arrayItem .checkboxField label, .arrayItem .objectlinkField label{
+	sdisplay:inline !important;
+	display:block;
+}
+input.datetimeShortInput
+{
+
+}
+
+/*Magic padding to align with other xml template input fields correctly*/
+.content-space{
+    box-sizing: border-box;
+    padding-right: 2.3%;
+}
+.fileobjectField__content{
+    line-height: 35px;
+}
+.imageBox{
+	max-height:100px;
+	overflow: hidden;
+}
+
+.imageBox img{
+	max-height:100px;
+    max-width:100px;
+}
+
+.richtextField
+{
+    visibility: hidden;
+}
+.hiddenFields
+{
+	display:none;
+}
+.objectPreview
+{
+    font-size: 12px;
+    color: #37b1a7;
+}
+.objectPreview
+{
+    vertical-align: baseline;
+}
+.googleMapContainer
+{
+    margin: 0.5em 0 0.5em 0;
+    width: 600px;
+    height: 300px;
+    position: relative;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+.googleMapCoordsPreview span
+{
+    font-weight: bold;
+}
+
+.google_map_pointField {
+    position: relative;
+}
+
+.google_map_pointField #mapSearchPanel{
+    position:absolute;
+    top:35px;
+    left:5px;
+}
+
+.google_map_pointField #mapSearchPanel input{
+    width:300px;
+    border: 1px solid #f1f1f1;
+    border-radius: 2px;
+    opacity:0.8;
+}
+
+.google_map_pointField #mapSearchPanel input:focus{
+    opacity:1;
+    outline: none;
+}

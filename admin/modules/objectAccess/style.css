@@ -1,0 +1,127 @@
+table.accessRules
+{
+    width: 390px;
+    float: left;
+    margin-right: 60px;
+    margin-bottom: 20px;
+}
+
+table.accessRules .name
+{
+    width: 170px;
+
+}
+table.accessRules .value
+{
+    width: 100px;
+}
+table.accessRules .remove
+{
+    width: 50px;
+}
+
+table.accessRules td
+{
+    text-align: center;
+}
+
+table.accessRules .template
+{
+    display: none;
+}
+
+table.accessRules tr.rule label
+{
+    display: block;
+    cursor: pointer;
+}
+
+table.accessRules thead .noRules
+{
+    display: none;
+}
+
+table.accessRules thead .noRules
+{
+    display: table-row;
+}
+
+table.hasRules thead .noRules
+{
+    display: none;
+}
+
+table.accessRules .headingGroup,
+table.accessRules .headingUser
+{
+    display: none;
+}
+
+table.hasGroupRules .headingGroup,
+table.hasUserRules .headingUser
+{
+    display: table-row;
+}
+
+
+
+
+.subjectsBox
+{
+    width: 460px;
+    float: left;
+    text-align: left;
+    padding-right: 30px;
+}
+
+.subjectsWrap
+{
+    display: none;
+    padding: 1em;
+    font-size: 85%;
+    margin-top: 1em;
+    background-color: #f3f1f1;
+    border: 1px solid #d4d4d4;
+}
+
+.subjects .group
+{
+    float: left;
+    width: 140px;
+    margin-right: 10px;
+    border-right: 1px solid #d4d4d4;
+}
+
+.subjects .group:last-child {
+    border-right: none;
+}
+
+.subjects .group h3
+{
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    text-align: center;
+}
+
+.subjects .subjectsGeneral
+{
+    padding-top: 30px;
+    width: 120px;
+}
+
+.subjects button
+{
+    margin: 0.2em 0;
+    text-transform: none;
+    color: #000;
+}
+
+.addSubject {
+    text-align: left;
+}
+
+.addSubject img {
+    float: left;
+    margin-bottom: 15px;
+}
